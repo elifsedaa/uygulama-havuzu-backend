@@ -1,0 +1,11 @@
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\bin\Debug\net8.0\UygulamaHavuzu.Domain.deps.json
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\bin\Debug\net8.0\UygulamaHavuzu.Domain.dll
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\bin\Debug\net8.0\UygulamaHavuzu.Domain.pdb
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.AssemblyInfoInputs.cache
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.AssemblyInfo.cs
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.csproj.CoreCompileInputs.cache
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.dll
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\refint\UygulamaHavuzu.Domain.dll
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.pdb
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\ref\UygulamaHavuzu.Domain.dll
