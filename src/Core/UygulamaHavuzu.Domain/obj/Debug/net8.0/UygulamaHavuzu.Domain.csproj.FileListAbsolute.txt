@@ -9,3 +9,4 @@ C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\
 C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\refint\UygulamaHavuzu.Domain.dll
 C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.pdb
 C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\ref\UygulamaHavuzu.Domain.dll
+C:\Users\elifs\Documents\uygulama-havuzu-backend\src\Core\UygulamaHavuzu.Domain\obj\Debug\net8.0\UygulamaHavuzu.Domain.sourcelink.json

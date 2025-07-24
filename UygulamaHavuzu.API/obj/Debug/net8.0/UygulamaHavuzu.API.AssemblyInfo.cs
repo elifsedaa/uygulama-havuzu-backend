@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UygulamaHavuzu.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d73cfe8babc6de98b39194fcd979ce53d03fbcee")]
 [assembly: System.Reflection.AssemblyProductAttribute("UygulamaHavuzu.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UygulamaHavuzu.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
