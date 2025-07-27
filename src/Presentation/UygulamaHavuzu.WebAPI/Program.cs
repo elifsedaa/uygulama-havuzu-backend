@@ -8,6 +8,8 @@ using UygulamaHavuzu.Application.Services;
 using UygulamaHavuzu.Domain.Interfaces;
 using UygulamaHavuzu.Persistence.Context;
 using UygulamaHavuzu.Persistence.Repositories;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +18,7 @@ var configuration = builder.Configuration;
 
 // Entity Framework ve SQL Server baðlantýsý
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
 
 // Repository'leri DI container'a ekle
 builder.Services.AddScoped<IUserRepository, UserRepository>();

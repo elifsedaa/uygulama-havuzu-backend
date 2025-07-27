@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -15,17 +16,17 @@ namespace UygulamaHavuzu.Persistence.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Username = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false, comment: "Kullanıcı adı"),
-                    Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false, comment: "E-posta adresi"),
-                    PasswordHash = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false, comment: "Hash'lenmiş şifre"),
-                    FullName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true, comment: "Ad Soyad"),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true, comment: "Kullanıcı aktif mi"),
-                    EmailConfirmed = table.Column<bool>(type: "bit", nullable: false, defaultValue: false, comment: "E-posta doğrulandı mı"),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETUTCDATE()", comment: "Oluşturulma tarihi"),
-                    LastLoginAt = table.Column<DateTime>(type: "datetime2", nullable: true, comment: "Son giriş tarihi"),
-                    Role = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false, defaultValue: "User", comment: "Kullanıcı rolü")
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Username = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false, comment: "Kullanıcı adı"),
+                    Email = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false, comment: "E-posta adresi"),
+                    PasswordHash = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false, comment: "Hash'lenmiş şifre"),
+                    FullName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true, comment: "Ad Soyad"),
+                    IsActive = table.Column<bool>(type: "boolean", nullable: false, defaultValue: true, comment: "Kullanıcı aktif mi"),
+                    EmailConfirmed = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false, comment: "E-posta doğrulandı mı"),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValueSql: "NOW()", comment: "Oluşturulma tarihi"),
+                    LastLoginAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true, comment: "Son giriş tarihi"),
+                    Role = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false, defaultValue: "User", comment: "Kullanıcı rolü")
                 },
                 constraints: table =>
                 {
