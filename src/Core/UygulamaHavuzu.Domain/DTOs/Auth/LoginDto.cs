@@ -3,28 +3,28 @@ using System.ComponentModel.DataAnnotations;
 namespace UygulamaHavuzu.Domain.DTOs.Auth
 {
     /// <summary>
-    /// Kullanýcýnýn giriþ iþlemi sýrasýnda frontend'den backend'e gönderdiði verileri temsil eder.
-    /// Genellikle Login API isteðinde request body olarak kullanýlýr.
+    /// Kullanï¿½cï¿½nï¿½n giriï¿½ iï¿½lemi sï¿½rasï¿½nda frontend'den backend'e gï¿½nderdiï¿½i verileri temsil eder.
+    /// Genellikle Login API isteï¿½inde request body olarak kullanï¿½lï¿½r.
     /// </summary>
-    /// 
+    /// hï¿½ugï¿½u
     public class LoginDto
     {
-        [Required(ErrorMessage = " Kullanici adi ve e-posta zorunludur")] // asp.net model validation sýrasýnda kontrol edilir.
+        [Required(ErrorMessage = " Kullanici adi ve e-posta zorunludur")] // asp.net model validation sï¿½rasï¿½nda kontrol edilir.
         public string UsernameOrEmail { get; set; } = string.Empty; // hem kullanici adi hem de e-posta ile giris imkani
 
         [Required(ErrorMessage = "Sifre Zorunludur")]
         [MinLength(8, ErrorMessage = " Sifre en az 8 karakter olmalidir")]
         public string Password { get; set; } = string.Empty;
-        // þifre düz metin olarak gelicek hash'leme iþlemi backend tarafýndan yapýlýr.
+        // ï¿½ifre dï¿½z metin olarak gelicek hash'leme iï¿½lemi backend tarafï¿½ndan yapï¿½lï¿½r.
 
         public bool RememberMe { get; set; } = false;
-        // kullanýcý 'beni hatirla' secerse token suresi uzatilacak
+        // kullanï¿½cï¿½ 'beni hatirla' secerse token suresi uzatilacak
     }
 
 
     /// <summary>
-    /// Kullanýcý kaydý sýrasýnda frontend'den backend'e gönderilen verileri taþýr.
-    /// Register API'sinde request body olarak kullanýlýr.
+    /// Kullanï¿½cï¿½ kaydï¿½ sï¿½rasï¿½nda frontend'den backend'e gï¿½nderilen verileri taï¿½ï¿½r.
+    /// Register API'sinde request body olarak kullanï¿½lï¿½r.
     /// </summary>
 
     public class RegisterDto //kayit formundaki alanlari temsil edicek
@@ -41,20 +41,20 @@ namespace UygulamaHavuzu.Domain.DTOs.Auth
 
         [Required(ErrorMessage = "Sifre Zorunludur")]
         [MinLength(8, ErrorMessage = "Sifre en az 3 karakter olmalidir")]
-        //RegularExpression bit metnin istenen formatta olmasýný kontrol eden validasyon 
+        //RegularExpression bit metnin istenen formatta olmasï¿½nï¿½ kontrol eden validasyon 
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]",
-            ErrorMessage = "Þifre en az bir küçük harf, bir büyük harf, bir rakam ve bir özel karakter içermelidir")]
+            ErrorMessage = "ï¿½ifre en az bir kï¿½ï¿½ï¿½k harf, bir bï¿½yï¿½k harf, bir rakam ve bir ï¿½zel karakter iï¿½ermelidir")]
         public string Password { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Þifre doðrulama zorunludur")]
-        [Compare("Password", ErrorMessage = "Þifreler eþleþmiyor")]
+        [Required(ErrorMessage = "ï¿½ifre doï¿½rulama zorunludur")]
+        [Compare("Password", ErrorMessage = "ï¿½ifreler eï¿½leï¿½miyor")]
         public string ConfirmPassword { get; set; } = string.Empty;
 
         [MaxLength(100, ErrorMessage = "Ad Soyad 100 karakterden fazla olamaz")]
         public string? FullName { get; set; }
     }
 
-    public class LoginResponseDto // girisin basarili oldugunda frontende donen yanýt yapisi, JWT token, token suresi, kullanici bilgilerini icerir
+    public class LoginResponseDto // girisin basarili oldugunda frontende donen yanï¿½t yapisi, JWT token, token suresi, kullanici bilgilerini icerir
     {
         public string Token { get; set; } = string.Empty;
         // kimlik dogrulama icin kullanilacak JWT token
@@ -67,14 +67,14 @@ namespace UygulamaHavuzu.Domain.DTOs.Auth
 
     public class UserInfoDto
     {
-        public int Id { get; set; } // Kullanýcýnýn veritabanýndaki ID'si
+        public int Id { get; set; } // Kullanï¿½cï¿½nï¿½n veritabanï¿½ndaki ID'si
         public string Username { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public string? FullName { get; set; } // Ýsteðe baðlý tam adý
-        public string Role { get; set; } = string.Empty; // Kullanýcýnýn rolü (Admin, User)
-        public bool EmailConfirmed { get; set; } // E-posta adresi onaylanmýþ mý
-        public DateTime CreatedAt { get; set; } // Kullanýcýnýn oluþturulma zamaný
-        public DateTime? LastLoginAt { get; set; } // Son giriþ tarihi (hiç giriþ yapýlmadýysa null olabilir)
+        public string? FullName { get; set; } // ï¿½steï¿½e baï¿½lï¿½ tam adï¿½
+        public string Role { get; set; } = string.Empty; // Kullanï¿½cï¿½nï¿½n rolï¿½ (Admin, User)
+        public bool EmailConfirmed { get; set; } // E-posta adresi onaylanmï¿½ï¿½ mï¿½
+        public DateTime CreatedAt { get; set; } // Kullanï¿½cï¿½nï¿½n oluï¿½turulma zamanï¿½
+        public DateTime? LastLoginAt { get; set; } // Son giriï¿½ tarihi (hiï¿½ giriï¿½ yapï¿½lmadï¿½ysa null olabilir)
     }
 
     public class ApiResponse<T>
@@ -84,7 +84,7 @@ namespace UygulamaHavuzu.Domain.DTOs.Auth
         public T? Data { get; set; }
         public List<string>? Errors { get; set; }
 
-        public static ApiResponse<T> SuccessResult(T data, string message = "Ýþlem baþarýlý")
+        public static ApiResponse<T> SuccessResult(T data, string message = "ï¿½ï¿½lem baï¿½arï¿½lï¿½")
         {
             return new ApiResponse<T>
             {
@@ -108,11 +108,11 @@ namespace UygulamaHavuzu.Domain.DTOs.Auth
 
 
  /*
-LoginDto ve RegisterDto istek (request) sýrasýnda frontend’den backend’e gelen verileri temsil eder. Burada doðrulama ve sadece ihtiyaç duyulan bilgiler var.
+LoginDto ve RegisterDto istek (request) sï¿½rasï¿½nda frontendï¿½den backendï¿½e gelen verileri temsil eder. Burada doï¿½rulama ve sadece ihtiyaï¿½ duyulan bilgiler var.
 
-LoginResponseDto ise cevap (response) olarak backend’den frontend’e dönen verileri kapsar. Mesela JWT token ve kullanýcý bilgileri.
+LoginResponseDto ise cevap (response) olarak backendï¿½den frontendï¿½e dï¿½nen verileri kapsar. Mesela JWT token ve kullanï¿½cï¿½ bilgileri.
 
-UserInfoDto sadece frontend’in görmesi gereken kullanýcý bilgilerini taþýr, hassas veriler yok.
+UserInfoDto sadece frontendï¿½in gï¿½rmesi gereken kullanï¿½cï¿½ bilgilerini taï¿½ï¿½r, hassas veriler yok.
 
-ApiResponse<T> ise API'nin standart bir cevap yapýsýdýr, hem veri hem durum bilgisini düzenler.
+ApiResponse<T> ise API'nin standart bir cevap yapï¿½sï¿½dï¿½r, hem veri hem durum bilgisini dï¿½zenler.
   */

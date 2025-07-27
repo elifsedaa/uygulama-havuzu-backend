@@ -4,7 +4,7 @@ namespace UygulamaHavuzu.Domain.Entities
 {
     public class User
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         // Benzersiz kullanici kimligi (primary key)
 
         // Validation 
